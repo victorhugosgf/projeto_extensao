@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Geração de Horários</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulário de Geração de Horários</h1>
+        <form id="scheduleForm">
+            <!-- Horário de Início -->
+            <label for="start-time">Horário de Início das Aulas:</label>
+            <input type="time" id="start-time" name="start-time" required>
+
+            <!-- Duração da Aula -->
+            <label for="lesson-duration">Duração de Cada Aula (em minutos):</label>
+            <input type="number" id="lesson-duration" name="lesson-duration" required>
+
+            <!-- Quantidade de Aulas Antes do Intervalo -->
+            <label for="lessons-before-break">Quantidade de Aulas Antes do Intervalo:</label>
+            <input type="number" id="lessons-before-break" name="lessons-before-break" required>
+
+            <!-- Duração do Intervalo -->
+            <label for="break-duration">Duração do Intervalo (em minutos):</label>
+            <input type="number" id="break-duration" name="break-duration" required>
+
+            <!-- Quantidade de Aulas de Segunda a Sexta -->
+            <fieldset>
+                <legend>Quantidade de Aulas de Segunda a Sexta:</legend>
+                <label for="segunda-classes">Segunda:</label>
+                <input type="number" id="segunda-classes" name="segunda-classes">
+                
+                <label for="terca-classes">Terça:</label>
+                <input type="number" id="terca-classes" name="terca-classes">
+                
+                <label for="quarta-classes">Quarta:</label>
+                <input type="number" id="quarta-classes" name="quarta-classes">
+                
+                <label for="quinta-classes">Quinta:</label>
+                <input type="number" id="quinta-classes" name="quinta-classes">
+                
+                <label for="sexta-classes">Sexta:</label>
+                <input type="number" id="sexta-classes" name="sexta-classes">
+            </fieldset>
+
+            <!-- Número de Turmas -->
+            <label for="num-classes">Número de Turmas:</label>
+            <input type="number" id="num-classes" name="num-classes" required>
+
+            <!-- Turmas -->
+            <div id="class-section"></div>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
